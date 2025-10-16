@@ -1,17 +1,22 @@
-//
-//  winHotKeyApp.swift
-//  winHotKey
-//
-//  Created by jack on 2025/10/15.
-//
-
 import SwiftUI
 
 @main
 struct winHotKeyApp: App {
+    @StateObject private var viewModel: AppViewModel
+
+    init() {
+        let viewModel = AppViewModel()
+        _viewModel = StateObject(wrappedValue: viewModel)
+        MainWindowTracker.shared.configure(viewModel: viewModel)
+        DispatchQueue.main.async {
+            MainWindowTracker.shared.showWindow()
+        }
+    }
+
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        MenuBarExtra("winHotKey", systemImage: "bolt.circle") {
+            StatusMenuView()
+                .environmentObject(viewModel)
         }
     }
 }
