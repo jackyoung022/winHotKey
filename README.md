@@ -12,10 +12,8 @@ winHotKey 是一款 macOS 菜单栏小工具，可以为任意应用窗口绑定
 
 ## 安装与运行
 
-1. 打开项目：`winHotKey/winHotKey.xcodeproj`
-2. 在 Xcode 中选择 `winHotKey` 目标，使用 `My Mac` 运行。
-3. 首次启动需在「系统设置 → 隐私与安全性 → 辅助功能」中勾选 winHotKey。
-4. 应用启动后会自动打开主界面，同时常驻于菜单栏。
+1. 在[Release](https://github.com/jackyoung022/winHotKey/releases)中下载winHotKey.zip，解压后将winHotKey.app移动进应用程序目录
+1. 双击运行，第一次运行会要求获取辅助功能权限，赋予权限后重新运行
 
 ## 快速上手
 
@@ -59,4 +57,4 @@ winHotKey 是一款 macOS 菜单栏小工具，可以为任意应用窗口绑定
 
 ## 授权协议
 
-本项目目前未指定开源协议，默认保留所有权利。若需要使用或转载，请先联系作者。
+见LICENSE
